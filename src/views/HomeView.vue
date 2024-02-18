@@ -21,7 +21,7 @@ const fetchVideoUrls = async () => {
 
 
     // Make the API call to get video URLs
-    const response = await fetch(`http://localhost:5000/getstories/${brandName}/${id}`)
+    const response = await fetch(`https://backen-squib.onrender.com/getstories/${brandName}/${id}`)
     if (response.ok) {
       const data = await response.json()
       videoUrls.value = data.productStoryUrls
@@ -54,11 +54,11 @@ onMounted(() => {
             <source :src="url" type="video/mp4">
           </amp-video>
         </amp-story-grid-layer>
-        <amp-story-grid-layer template="thirds">
+        <!-- <amp-story-grid-layer template="thirds">
           <h2 animate-in="fly-in-bottom" grid-area="lower-third" animate-in-delay="0.4s">
             Best walk ever!
           </h2>
-        </amp-story-grid-layer>
+        </amp-story-grid-layer> -->
       </amp-story-page>
     </amp-story>
 
